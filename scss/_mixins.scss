@@ -4,21 +4,34 @@
     align-items: center;
 
 }
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@mixin imagen {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
 @mixin boton{
-    background-color: $color-secundario;
-    color: $color-terciario;
+    background-color: $color-terciario;
+    color: $color-primario;
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
     &:hover{
-        background-color: $color-beige;
+        background-color: $color-primario;
     }
 }
 @mixin responsive($size){
     @media(max-width: $size){
-
         @content;
     }
 }
