@@ -3,8 +3,11 @@ body {
     background-color: $color-claro;
     font-family: 'Times New Roman', Times, serif;
     color: $color-secundario ;
-    padding: 20px;
-    
+
+    @include responsive(600px) {
+      padding: 15px
+    }
+
 }
 
 nav {
@@ -41,28 +44,9 @@ nav {
 }
 
 #inicio {
+    padding-top: 15px;
+    margin: 0;
     min-height: 300px;
-    padding: 20px;
-    gap: 20px;
-    @include flex-between;
-
-
-    div {
-        max-width: 400px;
-
-    }
-
-    img {
-        @include imagen;
-        width: 90%;
-
-
-    }
-}
-
-.informacion {
-    min-height: 300px;
-    padding: 15px;
     width: 100%;
 
     @include flex-center;
@@ -70,15 +54,45 @@ nav {
     gap: 20px;
 
     h1 {
+        text-align: left;
+    }
+
+    img {
+        @include imagen;
+        width: 90%;
+        
+    }
+
+    #div {
+        @include flex-center;
+        padding-left: 50px;
+    }
+
+}
+
+.informacion {
+    min-height: 300px;
+    padding: 0px;
+    width: 100%;
+
+    @include flex-center;
+
+    gap: 20px;
+
+    h {
         text-align: center;
     }
 
     img {
-       @include imagen;
+        @include imagen;
         width: 60%;
 
     }
-    
+
+    div {
+        padding: 15px;
+    }
+
 }
 
 .grid-menu {
@@ -99,6 +113,11 @@ nav {
     @include responsive(600px) {
         grid-template-columns: 1fr;
     }
+
+    button {
+        @include boton;
+
+    }
 }
 
 .card {
@@ -116,6 +135,50 @@ nav {
         color: $color-fondo;
     }
 
+    img {
+        @include imagen;
+        display: flex;
+        width: 100%;
+    }
+
+}
+
+form {
+    margin: 15px;
+
+    div {
+        background-color: $color-fondo;
+        padding: 10px;
+
+        @include flex-center;
+
+        textarea {
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: $color-blanco;
+            ;
+        }
+    }
+
+    label {
+        margin-right: 15px;
+        background-color: $color-fondo;
+        color: $color-blanco;
+        padding: 8px;
+        border-radius: 5px;
+    }
+
+    button {
+
+        @include boton;
+    }
+
+    input {
+        border-radius: 5px;
+
+    }
 }
 
 footer {

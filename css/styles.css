@@ -3,7 +3,11 @@ body {
   background-color: #EBDFEC;
   font-family: "Times New Roman", Times, serif;
   color: #C4A0C5;
-  padding: 20px;
+}
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
 }
 
 nav {
@@ -37,15 +41,17 @@ nav .barra li a:hover {
 }
 
 #inicio {
+  padding-top: 15px;
+  margin: 0;
   min-height: 300px;
-  padding: 20px;
-  gap: 20px;
+  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
 }
-#inicio div {
-  max-width: 400px;
+#inicio h1 {
+  text-align: left;
 }
 #inicio img {
   max-width: 100%;
@@ -54,17 +60,23 @@ nav .barra li a:hover {
   border-radius: 10px;
   width: 90%;
 }
+#inicio #div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+}
 
 .informacion {
   min-height: 300px;
-  padding: 15px;
+  padding: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-.informacion h1 {
+.informacion h {
   text-align: center;
 }
 .informacion img {
@@ -73,6 +85,9 @@ nav .barra li a:hover {
   display: block;
   border-radius: 10px;
   width: 60%;
+}
+.informacion div {
+  padding: 15px;
 }
 
 .grid-menu {
@@ -97,6 +112,18 @@ nav .barra li a:hover {
     grid-template-columns: 1fr;
   }
 }
+.grid-menu button {
+  background-color: #D7C0D8;
+  color: #B081B1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.grid-menu button:hover {
+  background-color: #B081B1;
+}
 
 .card {
   background-color: #C4A0C5;
@@ -110,6 +137,53 @@ nav .barra li a:hover {
 }
 .card h3 {
   color: #7D4E7E;
+}
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+}
+
+form {
+  margin: 15px;
+}
+form div {
+  background-color: #7D4E7E;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form div textarea {
+  border-radius: 5px;
+}
+form div h2 {
+  color: #F5EFF5;
+}
+form label {
+  margin-right: 15px;
+  background-color: #7D4E7E;
+  color: #F5EFF5;
+  padding: 8px;
+  border-radius: 5px;
+}
+form button {
+  background-color: #D7C0D8;
+  color: #B081B1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+form button:hover {
+  background-color: #B081B1;
+}
+form input {
+  border-radius: 5px;
 }
 
 footer {
